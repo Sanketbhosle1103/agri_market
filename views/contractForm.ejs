@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Contract</title>
+</head>
+<body>
+    <h1>Create Contract</h1>
+    <form action="/create-contract" method="post" enctype="multipart/form-data">
+        <label for="farmerName">Farmer Name:</label>
+        <input type="text" id="farmerName" name="farmerName" required><br>
+        <label for="buyerName">Buyer Name:</label>
+        <input type="text" id="buyerName" name="buyerName" required><br>
+        <label for="contractDetails">Contract Details:</label>
+        <textarea id="contractDetails" name="contractDetails" required></textarea><br>
+        <label for="signatureImage">Upload Signature Image:</label>
+        <input type="file" id="signatureImage" name="signatureImage" required><br>
+        <button type="submit">Create Contract</button>
+    </form>
+</body>
+</html>

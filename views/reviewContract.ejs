@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Contract</title>
+</head>
+<body>
+    <h1>Review Contract</h1>
+    <p><strong>Farmer Name:</strong> <%= farmerName %></p>
+    <p><strong>Buyer Name:</strong> <%= buyerName %></p>
+    <p><strong>Contract Details:</strong> <%= contractDetails %></p>
+    <img src="<%= signatureImagePath %>" alt="Signature" style="width: 200px;"><br><br>
+    <form action="/sign-contract" method="post">
+        <input type="hidden" name="farmerName" value="<%= farmerName %>">
+        <input type="hidden" name="buyerName" value="<%= buyerName %>">
+        <input type="hidden" name="contractDetails" value="<%= contractDetails %>">
+        <input type="hidden" name="signatureImagePath" value="<%= signatureImagePath %>">
+        <button type="submit">Sign Contract</button>
+    </form>
+</body>
+</html>
